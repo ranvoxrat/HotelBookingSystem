@@ -27,7 +27,7 @@ class LoginController extends Controller
                 ->withInput();
         }
         if (Auth::attempt($request->only('username', 'password'))) {
-            return redirect()->route('registration');
+            return redirect()->route('table');
         } else {
             return redirect()->back()
                 ->withInput()

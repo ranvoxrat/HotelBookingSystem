@@ -19,6 +19,8 @@ class RegistrationController extends Controller
             'zip' => 'required',
             'phone' => 'required',
             'email' => 'required|email',
+            'room' => 'required',
+            'amount' => 'required',
             'checkinDate' => 'required|date',
             'checkinTime' => 'required',
             'checkoutDate' => 'required|date',
@@ -37,6 +39,8 @@ class RegistrationController extends Controller
         $registration->zip = $validatedData['zip'];
         $registration->phone = $validatedData['phone'];
         $registration->email = $validatedData['email'];
+        $registration->room = $validatedData['room'];
+        $registration->amount = $validatedData['amount'];
         $registration->checkinDate = $validatedData['checkinDate'];
         $registration->checkinTime = $validatedData['checkinTime'];
         $registration->checkoutDate = $validatedData['checkoutDate'];
@@ -46,6 +50,11 @@ class RegistrationController extends Controller
         $registration->childs = $validatedData['childs'];
         $registration->save();
         Alert::success('Success', 'Reservation Success');
-        return redirect()->route('registration');
+        return redirect()->route('table');
     }
+    public function showRegistration(){
+        $registrations=Registration::select( 'fname','lname','address','phone','room','amount','checkinDate','checkinTime','checkoutDate','checkoutTime','preference','adults','childs')->get();
+        return view('table', compact('registrations'));
+    }
+    
 }

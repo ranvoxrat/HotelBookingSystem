@@ -51,8 +51,18 @@
                     <input name="phone" placeholder="Phone" class="flex-1 px-2 py-1 focus:outline-none border-b-2 font-poppins font-light text-white border-blue bg-transparent"/>
                     </span>
                     <span class="flex flex-col flex-1">
-                    <label for="zip" class="font-poppins font-medium text-white">Email</label>
+                    <label for="email" class="font-poppins font-medium text-white">Email</label>
                     <input name="email" placeholder="Email" class="flex-1 px-2 py-1 focus:outline-none border-b-2 font-poppins font-light text-white border-blue bg-transparent"/>
+                    </span>
+                 </div>
+                 <div class="flex flex-wrap flex-row gap-4 px-4 py-2">
+                 <span class="flex flex-col flex-1">
+                    <label for="room" class="font-poppins font-medium text-white">Room</label>
+                    <input name="room" placeholder="Room" class="flex-1 px-2 py-1 focus:outline-none border-b-2 font-poppins font-light text-white border-blue bg-transparent"/>
+                    </span>
+                    <span class="flex flex-col flex-1">
+                    <label for="amount" class="font-poppins font-medium text-white">Amount</label>
+                    <input name="amount" placeholder="Amount" class="flex-1 px-2 py-1 focus:outline-none border-b-2 font-poppins font-light text-white border-blue bg-transparent"/>
                     </span>
                  </div>
                  <div  class="flex flex-wrap flex-row gap-4 px-4 py-2">

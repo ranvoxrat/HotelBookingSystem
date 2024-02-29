@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('zip');
             $table->string('phone');
             $table->string('email');
+            $table->string('room');
+            $table->string('amount');
             $table->date('checkinDate');
             $table->time('checkinTime');
             $table->date('checkoutDate');
